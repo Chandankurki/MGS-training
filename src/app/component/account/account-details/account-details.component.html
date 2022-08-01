@@ -1,0 +1,30 @@
+<div class="header">
+    <ul id="header">
+        <li class="list"><a class="active" href="#home">INB Net Bank</a></li>
+        <li class="list" style="float:right"><a routerLink="/login">LogOut</a></li>
+    </ul>
+</div>
+
+<br><br><br><br>
+<table style="width: 90%;" [border]="1" id="employee">
+    <tr>
+        <th>Customer Id</th>
+        <th></th>
+        <th>Type of Account</th>
+        <th>Balance</th>
+    </tr>
+
+    <tr *ngFor="let account of allAccountDetails">
+        <th>{{account.customerDetails.customerId}}</th>
+        <th>{{account.accountId}}</th>
+        <th>{{account.typeOfAccount}}</th>
+        <th>{{account.currentBalance}}</th>
+    </tr>
+</table>
+
+
+
+<br><br>
+<div id="footer">
+    <h6>© INB Net Bank 2022 Copy rights received</h6>
+</div>

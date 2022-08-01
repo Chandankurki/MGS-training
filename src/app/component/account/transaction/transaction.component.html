@@ -1,0 +1,33 @@
+<div class="header">
+    <ul id="header">
+        <li class="list"><a class="active" href="#home">INB Net Bank</a></li>
+        <li class="list" style="float:right"><a routerLink="/login">LogOut</a></li>
+    </ul>
+</div>
+<br><br><br> <br>
+<button id="home" (click)="home()">Home</button> <br> <br>
+<h5 id="acc">Account Id : {{accountId}}</h5>
+<table style="width: 95%;" [border]="1" id="employee">
+    <tr>
+        <th>Transaction Id</th>
+        <th>Account Id To</th>
+        <th>Amount</th>
+        <th>Date</th>
+        <th>Transaction Type</th>
+    </tr>
+
+    <tr *ngFor="let history of transactionHistory">
+        <td>{{history.transactionId}}</td>
+        <td>{{history.accountIdTo.accountId}}</td>
+        <td>{{history.transactionAmount}}</td>
+        <td>{{history.transactionDate}}</td>
+        <td>{{history.transactionType}}</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+<div id="footer">
+    <h6>© INB Net Bank 2022 Copy rights received</h6>
+</div>
