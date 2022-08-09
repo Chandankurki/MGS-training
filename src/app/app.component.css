@@ -1,14 +1,18 @@
 .arabic{
-    margin-right: -870px;
+    margin-right: -1050px;
+    float: right;
+    text-decoration: none;
 }
-/* .navbar-brand{
-    margin-left: -10px;
-} */
+
+.navbar-brand{
+    margin-left: -740px;
+}
+
 #btn{
     background-color: rgba(2, 56, 255, 0.678);
     color: white;
     border-radius: 5px;
-    margin-right: -220px;
+    margin-right: -740px;
     margin-left: 0%;
 }
 .header{
@@ -17,30 +21,28 @@
 }
 
 header{
-    width: 90%;
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: green;
+}
+
+.row{
+    width: 100%;
 }
 
 
-
+.container{
+    max-width: 0px;
+}
 
 
 /* --------------------------------------------- */
-
-
-/* ---------------------------------------------------------- */
 
 footer{
     background-color: grey;
     text-align: center;
     padding: 5px 0px;
-    margin-left: 120px;
+    margin-left: 105px;
 }
-.footer-btn{
-    background-color: white;
-    border-radius: 5px;
-}
+
 

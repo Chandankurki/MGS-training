@@ -16,9 +16,9 @@ import { DropDownsModule } from '@progress/kendo-angular-dropdowns';
 import { DateInputsModule } from '@progress/kendo-angular-dateinputs';
 import { FormsModule } from '@angular/forms';
 import { ButtonsModule } from '@drizm/buttons';
-
 import { TooltipAllModule } from '@syncfusion/ej2-angular-popups';
 import { AppComponent } from './app.component';
+import { EditorModule } from '@progress/kendo-angular-editor';
 
 @NgModule({
   declarations: [
@@ -42,7 +42,8 @@ import { AppComponent } from './app.component';
     FormsModule,
     ChartsModule,
     ButtonsModule,
-    TooltipAllModule
+    TooltipAllModule,
+    EditorModule
 
   ],
   providers: [],

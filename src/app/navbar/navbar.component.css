@@ -11,18 +11,18 @@
     scrollbar-width: none;
 }
 #sidelogo{
-    background-color:  rgba(2, 56, 255, 0.678);
+    background-color:  #307eab;
       text-align: center; 
       color: white; 
        width: 50%; 
-       margin-left: 10px;
+       height: 80vh;
 }
 .sidename {
-    background-color:  rgba(2, 56, 255, 0.678);
-     width: 80%; 
+    background-color: #307eab;
+     width: 100%; 
      padding-left: 10px;
       color: white; 
-      margin-left: 10px;
+      height: 80vh;
 }
 
 .row {
@@ -36,12 +36,15 @@
     padding-right: 0px;
 }
 
-.bi h6 {
+.bi,h6{
     cursor: pointer;
+}
+h1{
+    font-size: 12px;
 }
 
 #btn {
-    background-color: rgba(2, 56, 255, 0.678);
+    background-color:#307eab;
     color: white;
     border-radius: 5px;
     margin-right: -220px;
@@ -62,7 +65,13 @@
     font-size: small;
     padding: 5px;
     color: white;
-    background-color: rgba(2, 56, 255, 0.678);
+    background-color:#307eab;
+}
+div.k-grid-header{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #307eab;
 }
 
 #content {

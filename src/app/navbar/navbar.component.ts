@@ -123,12 +123,12 @@ export class NavbarComponent{
     this.dataBinding.skip = 0;
   }
 
-  public photoURL(dataItem: { img_id: string; gender: string }): string {
-    const code: string = dataItem.img_id + dataItem.gender;
-    const image: { [Key: string]: string } = images;
+  // public photoURL(dataItem: { img_id: string; gender: string }): string {
+  //   const code: string = dataItem.img_id + dataItem.gender;
+  //   const image: { [Key: string]: string } = images;
 
-    return image[code];
-  }
+  //   return image[code];
+  // }
 
   public flagURL(dataItem: { country: string }): string {
     const code: string = dataItem.country;
