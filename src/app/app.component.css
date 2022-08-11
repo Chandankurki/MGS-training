@@ -1,18 +1,16 @@
 .arabic{
-    margin-right: -1050px;
-    float: right;
+    margin-right: -1250px;
     text-decoration: none;
 }
 
 .navbar-brand{
-    margin-left: -740px;
+    margin-left: -840px;
 }
 
 #btn{
     background-color: rgba(2, 56, 255, 0.678);
     color: white;
     border-radius: 5px;
-    margin-right: -740px;
     margin-left: 0%;
 }
 .header{
@@ -34,15 +32,71 @@ header{
 .container{
     max-width: 0px;
 }
+/* ------------------------------------------- */
+#sidelogo{
+    background-color:  #307eab;
+      text-align: center; 
+      color: white; 
+       width: 50%; 
+       height: 80vh;
+}
+.sidename {
+    background-color: #307eab;
+     width: 100%; 
+     padding-left: 10px;
+      color: white; 
+      height: 80vh;
+}
 
+.row {
+    height: 90%;
+    overflow: auto;
+    outline: none;
+    overflow-y: hidden;
+    padding-bottom: 15px;
+    -ms-overflow-style: scroll;
+    scrollbar-width: 50px;
+    padding-right: 0px;
+}
 
+.bi,h6{
+    cursor: pointer;
+}
+h1{
+    font-size: 12px;
+}
+
+#btn {
+    background-color:#307eab;
+    color: white;
+    border-radius: 5px;
+    margin-right: -220px;
+    margin-left: 0%;
+}
+
+#btn {
+    /* background-color: rgba(2, 56, 255, 0.678); */
+    color: white;
+    margin-right: 10px;
+}
+
+kendo-drawer-content {
+    height: 500px;
+    overflow: auto;
+    padding-left: 10px;
+  }
 /* --------------------------------------------- */
 
 footer{
     background-color: grey;
     text-align: center;
     padding: 5px 0px;
+    color: black;
     margin-left: 105px;
 }
-
+/* .footer-btn{
+    background-color: white;
+    border-radius: 5px;
+    border: 0;
+} */
 

@@ -1,5 +1,5 @@
 <div class="row">
-<div class="col-md-1 sidebar" style="padding-right: 0px;">
+  <div class="col-md-1 sidebar" style="padding-right: 0px;">
     <div id="sidelogo" [hidden]="sidelogo"><br>
       <i class="bi bi-house" (click)="open()"></i><br><br>
       <i class="bi bi-list" (click)="open()"></i><br><br>
@@ -17,40 +17,17 @@
       <h6 (click)="close()"><i class="bi bi-person" (click)="close()"></i>
         <h1>Customer Profile</h1><br>
       </h6>
-      <br>  
+      <br>
     </div>
   </div>
 
-
-  <div class="col-md-11" id="content">
+  <div class="col-xs-12 col-sm-11 " id="content">
     <div>
-
       <h1 class="heading">PENDING PRICING</h1>
-      <!-- <div class="table">
-                <p>
-                     <kendo-dropdownlist [data]="dropDownItems" textField="text" valueField="value" [defaultItem]="defaultItem"
-                       (valueChange)="handleFilterChange($event)" [style.width.px]="170">
-                     </kendo-dropdownlist>
-                   </p>
-                   <kendo-grid [data]="(gridItems | async)!" [pageSize]="pageSize" [skip]="skip" [pageable]="true"
-                     [sortable]="true" [sort]="sortDescriptor" (sortChange)="handleSortChange($event)"
-                     [height]="450">
-                     <kendo-grid-column field="ProductID" title="ID" [width]="40"> </kendo-grid-column>
-                     <kendo-grid-column field="ProductName" title="Product Name"> </kendo-grid-column>
-                     <kendo-grid-column field="Category.CategoryName" title="Category"> </kendo-grid-column>
-                     <kendo-grid-column field="UnitPrice" title="Unit Price" [width]="140" format="{0:c}"> </kendo-grid-column>
-                     <kendo-grid-column field="Discontinued" [width]="140" filter="boolean">
-                       <ng-template kendoGridCellTemplate let-dataItem>
-                         <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
-                       </ng-template>
-                     </kendo-grid-column>
-                   </kendo-grid>               
-                 </div> -->
-
       <div style="width: 99%;  margin-left: 5px;">
         <kendo-grid [kendoGridBinding]="gridView" kendoGridSelectBy="id" [(selectedKeys)]="mySelection" [pageSize]="2"
-          [pageable]="true" [sortable]="true" [groupable]="true" [reorderable]="true"[resizable]="true" [height]="300" 
-          [columnMenu]="{ filter: true }"> 
+          [pageable]="true" [sortable]="true" [groupable]="true" [reorderable]="true" [resizable]="true" [height]="300"
+          [columnMenu]="{ filter: true }">
           <ng-template kendoGridToolbarTemplate>
             <button kendoGridExcelCommand type="button" icon="file-excel" style="background-color:green;"></button>
             <button kendoGridPDFCommand icon="file-pdf" style="background-color:red;"></button>
@@ -63,10 +40,6 @@
           </kendo-grid-checkbox-column>
           <kendo-grid-column field="full_name" title="Contact Name" [width]="120">
             <ng-template kendoGridCellTemplate let-dataItem>
-              <!-- <div
-              class="customer-photo"
-              [ngStyle]="{ 'background-image': photoURL(dataItem) }"
-            ></div> -->
               <div class="customer-name">{{ dataItem.full_name }}</div>
             </ng-template>
           </kendo-grid-column>

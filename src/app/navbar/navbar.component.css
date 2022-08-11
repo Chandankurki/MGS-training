@@ -96,7 +96,11 @@ div.k-grid-header{
     margin-left: auto;
     margin-right: auto;
 }
-
+kendo-drawer-content {
+    height: 500px;
+    overflow: auto;
+    padding-left: 10px;
+  }
 /* ------------------------------------------------------------------ */
 
 .customer-photo {
@@ -125,4 +129,9 @@ div.k-grid-header{
 
   .text-bold {
     font-weight: 600;
+  }
+  kendo-drawer-content {
+    height: 500px;
+    overflow: auto;
+    padding-left: 10px;
   }

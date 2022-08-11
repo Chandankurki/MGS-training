@@ -1,0 +1,198 @@
+<div class="row">
+    <div class="col-md-1 sidebar" style="padding-right: 0px;">
+        <div id="sidelogo" [hidden]="sidelogo"><br>
+            <i class="bi bi-house" (click)="open()"></i><br><br>
+            <i class="bi bi-list" (click)="open()"></i><br><br>
+            <i class="bi bi-cash" (click)="open()"></i><br><br>
+            <i class="bi bi-person" (click)="open()"></i><br>
+        </div>
+
+        <div class="sidename" [hidden]="sideBar">
+            <br>
+            <h6 (click)="close()"><i class="bi bi-house" (click)="close()"></i></h6><br>
+            <h6 (click)="close()"><i class="bi bi-list" (click)="close()"></i></h6><br>
+            <h6 (click)="close()"><i class="bi bi-cash" (click)="close()"></i>
+                <h1>Charge</h1>
+            </h6><br>
+            <h6 (click)="close()"><i class="bi bi-person" (click)="close()"></i>
+                <h1>Customer Profile</h1><br>
+            </h6>
+            <br>
+        </div>
+    </div>
+
+    <div class="col-xs-12 col-sm-11" id="content">
+        <div>
+            <h1 class="heading">AUTO CUSTOMER CHARGE APPLICABILITY</h1>
+            <div class="example-wrapper">
+                <h2>CHARGE APPLICABILITY</h2>
+                <kendo-dropdownlist class="drop" defaultItem="--select--" [data]="listItems"> </kendo-dropdownlist><br>
+                <h2>PRICING MODEL</h2>
+                <kendo-dropdownlist class="drop" defaultItem="--select--" [data]="listItems"> </kendo-dropdownlist>
+            </div>
+            <div class="example-wrapper">
+                <h2>COUNTRY</h2>
+                <kendo-dropdownlist class="drop" defaultItem="--select--" [data]="country"> </kendo-dropdownlist><br>
+                <h2>CHARGES OFFERING</h2>
+                <kendo-dropdownlist class="drop" defaultItem="special pricing" [data]="country"> </kendo-dropdownlist>
+            </div>
+            <div class="example-wrapper">
+                <kendo-label class="k-checkbox-label" text="AVERAGER BALANCE APPLICABILITY"></kendo-label><br><br>
+                <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+
+            </div>
+            <div class="example-wrapper">
+                <h2>CHARGE EFFECTIVE DATE</h2>
+                <kendo-grid-spacer></kendo-grid-spacer>
+                <kendo-datepicker placeholder=""></kendo-datepicker>
+            </div>
+        </div><br>
+        <h1 class="heading">PRODUCTS</h1>
+        <div class="checkbox">
+            <input style="border: 1px solid black;" type="checkbox" (click)="chckBox()" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="CASH COLLECTIONS "></kendo-label><br><br>
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="DIRECT DEBIT SYSTEM "></kendo-label><br><br>
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="IMR"></kendo-label>
+        </div>
+
+        <div class="checkbox">
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="CHEQUE COLLECTIONS "></kendo-label><br><br>
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="VAM "></kendo-label><br><br>
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="RCD "></kendo-label>
+        </div>
+
+
+        <div class="checkbox">
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="CASH DELIVERY "></kendo-label><br><br>
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="EIPP "></kendo-label><br><br>
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="LIQUIDITY "></kendo-label>
+        </div>
+        <div class="checkbox">
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="CASH EXCHANGE"></kendo-label><br><br>
+            <input style="border: 1px solid black;" type="checkbox" #notification kendoCheckBox />
+            <kendo-label class="k-checkbox-label" text="COMMON CHARGES "></kendo-label>
+        </div><br><br>
+        <hr>
+
+        <div class="container-fluid" *ngIf="isShown" id="divshow">
+            <div class="row">
+                <div class="col-3" style="padding-left: 10px;">
+                    <div class="cash">
+                        <div class="collections">
+                            <input style="border: 1px solid black;" (click)="pricing()" type="checkbox" kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" text="CAC001-DENOMINATION BASEDPROCESSING CHARGES">
+                            </kendo-label>
+                        </div>
+                        <div class="collections">
+                            <input style="border: 1px solid black;" type="checkbox" kendoCheckBox />
+                            <kendo-label class="k-checkbox-label"
+                                text="CAC003-CASH-PICKUP POINT/ DEPOSIT LEVEL CHARGES ">
+                            </kendo-label>
+                        </div>
+                        <div class="collections">
+                            <input style="border: 1px solid black;" type="checkbox" kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification"
+                                text="CAC004-CASH COLLECTION ONE TIME CHARGES">
+                            </kendo-label>
+                        </div>
+                        <div class="collections">
+                            <input style="border: 1px solid black;" type="checkbox" kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification"
+                                text="CAC005-CASH COLLECTION PICKUP OINT LEVEL SERVICE">
+                            </kendo-label>
+                        </div>
+                        <div class="collections">
+                            <input style="border: 1px solid black;" type="checkbox" kendoCheckBox />
+                            <kendo-label class="k-checkbox-label" [for]="notification"
+                                text="CAC006-MASHREQ MONSTER LEASING CHARGE">
+                            </kendo-label>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-9" *ngIf="ispricing">
+                    <h1 style="color: blue;">Pricing</h1>
+                    <hr>
+                    <div class="row" style="height:45px ;">
+                        <div class="example">
+                            CHARGE CODE <br>
+                            <input style="border: 1px solid black; width:210px; height: 28px;" type="text"
+                                [disabled]="true" placeholder="CAC001" />
+                        </div>
+                        <div class="example">
+                            CHARGE DESCRIPTION <br>
+                            <kendo-dropdownlist class="drop" defaultItem="--select--" [data]="period">
+                            </kendo-dropdownlist>
+                            <br>
+                        </div>
+                        <div class="example">
+                            CHARGE TYPE <br>
+                            <kendo-dropdownlist class="drop" defaultItem="--select--" [data]="period">
+                            </kendo-dropdownlist>
+                            <br>
+                        </div>
+                        <div class="example">
+                            VAT%<br>
+                            <input style="border: 1px solid black; width:210px; height: 28px;" type="text"
+                                [disabled]="true" placeholder="5%" />
+                            <br>
+                        </div>
+                    </div><br>
+                    <div class="row" style="height:45px ;">
+                        <div class="example">
+                            COMPUTATION PERIOD<br>
+                            <kendo-dropdownlist class="drop" defaultItem="--select--" [data]="period">
+                            </kendo-dropdownlist>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="row" style="height:135px ;">
+                        <h1 style="color: blue;">Charge Attributes</h1>
+
+                        <div class="row">
+                            <hr>
+                            <div class="example">
+                                CHARGES LEVEL<br>
+                                <kendo-dropdownlist class="drop" defaultItem="Deposit Level" [data]="period">
+                                </kendo-dropdownlist>
+                                <br>
+                            </div>
+                            <div class="example">
+                                LOCATION<br>
+                                <input style="border: 1px solid black; width:210px; height: 28px;" type="text" />
+                                <br>
+                            </div>
+                            <div class="example">
+                                PICK-UP POINT<br>
+                                <input style="border: 1px solid black; width:210px; height: 28px;" type="text" />
+                                <br>
+                            </div>
+                            <div class="example">
+                                DENOMINATION<br>
+                                <kendo-dropdownlist class="drop" defaultItem="--select--" [data]="period">
+                                </kendo-dropdownlist> <br><br>
+                            </div><br>
+                            <div><button class="btn  btn-success" style="width: 66px;">Add</button>
+                                <button class="btn  btn-outline-info">CLEAR</button>
+                            </div>
+                        </div>
+                            <!-- <kendo-grid [kendoGridBinding]="gridView" kendoGridSelectBy="id" [(selectedKeys)]="mySelection" [pageSize]="2"
+                            [pageable]="true" [sortable]="true" [groupable]="true" [reorderable]="true" [resizable]="true" [height]="300"
+                            [columnMenu]="{ filter: true }">
+
+                            </kendo-grid> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

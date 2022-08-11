@@ -1,0 +1,92 @@
+*{
+    font-size:10px ;
+}
+
+#sidelogo{
+    background-color:  #307eab;
+      text-align: center; 
+      color: white; 
+       width: 50%; 
+       height: 80vh;
+}
+.sidename {
+    background-color: #307eab;
+     width: 100%; 
+     padding-left: 10px;
+      color: white; 
+      height: 80vh;
+}
+
+.row {
+    height: 90%;
+    overflow: auto;
+    outline: none;
+    overflow-y: hidden;
+    padding-bottom: 15px;
+    -ms-overflow-style: scroll;
+    scrollbar-width: 50px;
+    padding-right: 0px;
+}
+
+.bi,h6{
+    cursor: pointer;
+}
+h1{
+    font-size: 12px;
+}
+.heading {
+    font-size: small;
+    padding: 5px;
+    color: white;
+    background-color:#307eab;
+}
+#content {
+    border: 1px solid rgb(163, 162, 162);
+    margin: 0%;
+    padding: 0;
+    height: 700px;
+}
+kendo-autocomplete,
+      kendo-combobox,
+      kendo-dropdownlist,
+      kendo-dropdowntree,
+      kendo-multicolumncombobox {
+        width: 210px;
+      }
+  .remarks {
+    padding-left: 10px;
+}
+
+.checkbox{
+    display: inline-block;
+    margin-right: 190px;
+    margin-left: 10px;
+}
+.example-wrapper{
+    display: inline-block;
+    width: fit-content;
+    margin-left: 10px;
+    margin-right: 100px;
+}
+.collections{
+    border:1px solid ;
+    width: 320px;
+}
+.cash>div{
+    margin: 1px;
+    padding: 1px;
+}
+.example{
+    display: inline-block;
+    width: fit-content;
+}
+hr{
+    margin: 0%;
+}
+.container-fluid{
+    margin-top: 5px;
+}
+.btn{
+   width: 10%; 
+   margin: 5px;
+}

@@ -1,3 +1,4 @@
+
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { DataBindingDirective } from "@progress/kendo-angular-grid";
 import { process } from "@progress/kendo-data-query";
@@ -7,19 +8,19 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  selector: 'app-navbar',
-  templateUrl: './navbar.component.html',
+  selector: 'app-pending',
+  templateUrl: './pending.component.html',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./navbar.component.css'],
+  styleUrls: ['./pending.component.css']
 
 })
 export class NavbarComponent{
-  // title = 'demo';
+  title = 'demo';
   sideBar: boolean = true;
   sidelogo: boolean = false;
 
     constructor(private router:Router){}
-
+    
   open() {
     this.sideBar = false;
     this.sidelogo = true;
